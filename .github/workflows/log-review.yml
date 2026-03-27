@@ -7,8 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: anthropics/claude-code-action@v1
+        env:
+          ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_FOUNDRY_KEY }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_FOUNDRY_API_KEY }}
           azure_client_id: ${{ secrets.AZURE_CLIENT_ID }}
           azure_client_secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           azure_tenant_id: ${{ secrets.AZURE_TENANT_ID }}
