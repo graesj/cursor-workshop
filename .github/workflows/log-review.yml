@@ -1,8 +1,8 @@
-name: Exception to Jira
+name: Log review
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/2 * * * *"
+    - cron: "*/10 * * * *"
 jobs:
   report:
     runs-on: ubuntu-latest
