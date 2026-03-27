@@ -13,6 +13,8 @@ jobs:
       id-token: write
       actions: read
     steps:
+      - name: Install Azure CLI
+        run: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
       - uses: anthropics/claude-code-action@v1
         env:
           ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
