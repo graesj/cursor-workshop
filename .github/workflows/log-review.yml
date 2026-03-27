@@ -37,5 +37,13 @@ jobs:
                - A clear title describing the exception
                - An explanation of what the problem is
                - Suggested steps to resolve it
+            
+            Here is an example query to get logs: 
+            ```
+            az monitor log-analytics query \
+            --workspace "a53c2ee0-9900-4756-b9c1-ab1b96a28d87" \
+            --analytics-query "exceptions | where timestamp > ago(24h) | summarize Count=count(), LatestOccurrence=max(timestamp), EarliestOccurrence=min(timestamp) by problemId, type, outerMessage | top 2 by Count desc" \
+            --output json
+            ```
           claude_args: "--model claude-sonnet-4-6 --dangerously-skip-permissions"
           show_full_output: "true"
