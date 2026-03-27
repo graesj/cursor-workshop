@@ -38,3 +38,4 @@ jobs:
                - An explanation of what the problem is
                - Suggested steps to resolve it
           claude_args: "--model claude-sonnet-4-6 --dangerously-skip-permissions"
+          show_full_output: "true"
