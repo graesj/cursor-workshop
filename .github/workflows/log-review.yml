@@ -37,4 +37,4 @@ jobs:
                - A clear title describing the exception
                - An explanation of what the problem is
                - Suggested steps to resolve it
-          claude_args: "--model opus --dangerously-skip-permissions"
+          claude_args: "--model claude-sonnet-4-6 --dangerously-skip-permissions"
