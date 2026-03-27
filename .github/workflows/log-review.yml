@@ -25,7 +25,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_FOUNDRY_API_KEY }}
           prompt: |
-            Fetch exceptions from Azure Log Analytics and create Jira issues for each one.
+            Fetch exceptions from Azure Log Analytics and create GitHub issues for each one.
 
             Log Analytics workspace:
             - Workspace ID: a53c2ee0-9900-4756-b9c1-ab1b96a28d87
@@ -35,7 +35,7 @@ jobs:
             Steps:
             1. Authenticate to Azure using the provided credentials (AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_TENANT_ID, AZURE_SUBSCRIPTION_ID). If not already logged in, run `az login --service-principal` and let Claude handle it.
             2. Query the Log Analytics workspace for exceptions from the last 24 hours using the Azure CLI or REST API.
-            3. For each exception found, analyze it and create a Jira issue that includes:
+            3. For each exception found, analyze it and create a GitHub issue that includes:
                - A clear title describing the exception
                - An explanation of what the problem is
                - Suggested steps to resolve it
